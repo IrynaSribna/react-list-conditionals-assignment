@@ -3,17 +3,28 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  state = {
+    len: 0
+  }
+  
+  //inputLenght = 0
+  inputLengthHandler = (inputLength) => {
+    this.setState({len: inputLength})
+  }
   render() {
+    const style = {
+      color: 'blue',
+      font: 'inherit',
+      border: '1px solid magenta',
+      padding: '8px',
+      margin: '20px'
+    }
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <input style={style} onChange={(event) => this.inputLengthHandler(event.target.value.length)} type="text"/>
+        <p>Lenght: {this.state.len}</p>
+      </div>  
     );
   }
 }
