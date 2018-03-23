@@ -12,6 +12,6 @@ const displayChar = (props) => {
     return(
         <p style={style} onClick={props.clicked}>{props.char}</p>
     )
-}
+};
 
 export default displayChar
