@@ -7,7 +7,7 @@ import ValidationComponent from './ValidationComponent/ValidationComponent'
 class App extends Component {
   state = {
     len: 0,
-    text: 'Init text',
+    text: '',
     show: true
   }
   
@@ -41,7 +41,8 @@ class App extends Component {
       <div className="App">
         <input style={style} onChange={(event) => 
           this.inputHandler(event.target.value)} 
-          type="text"/>
+          type="text"
+          value={this.state.text}/>
         
         <p>Lenght: {this.state.len}</p>
         <ValidationComponent textLength={this.state.len}/>
