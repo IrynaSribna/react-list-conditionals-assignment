@@ -6,7 +6,7 @@ const validateLenght = (props) => {
     const validLenghtMessage = "Text is long enough"
 
     return(
-      props.textLength < 5 ?    
+      props.textLength < minLenght ?    
         <div>
             <p>{tooShortMessage}</p>
         </div>  :
