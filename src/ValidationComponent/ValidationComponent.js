@@ -1,17 +1,18 @@
-import React from 'react'
+import React from 'react';
 
 const validateLenght = (props) => {
     const minLenght = 5
-    const tooShortMessage = "Text is too short"
-    const validLenghtMessage = "Text is long enough"
-
+    const tooShortMessage = <p>Text is too short</p>
+    const validLenghtMessage = <p>Text is long enough</p>
+    
+    let message = tooShortMessage
+    if(props.textLength > minLenght) {
+        message = validLenghtMessage
+    }
+    
     return(
-      props.textLength < minLenght ?    
         <div>
-            <p>{tooShortMessage}</p>
-        </div>  :
-        <div>
-            <p>{validLenghtMessage}</p>
+           {message}
         </div>
     )
 }
