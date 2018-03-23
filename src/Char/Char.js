@@ -7,7 +7,7 @@ const displayChar = (props) => {
         margin: '16px',
         border: '1px solid black',
         textAlign: 'center'
-      }
+      };
 
     return(
         <p style={style} onClick={props.clicked}>{props.char}</p>
