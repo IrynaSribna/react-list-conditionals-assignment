@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CharComponent from './CharComponent/CharComponent'
-import ValidationComponent from './ValidationComponent/ValidationComponent'
+import Validation from './Validation/Validation'
 
 class App extends Component {
   state = {
@@ -45,7 +45,7 @@ class App extends Component {
           value={this.state.text}/>
         
         <p>Lenght: {this.state.len}</p>
-        <ValidationComponent textLength={this.state.len}/>
+        <Validation textLength={this.state.len}/>
         {seqT.map((ch, charIndex) => 
           <CharComponent char={ch} 
             clicked={() => this.deleteCharHandler(ch, charIndex)}
